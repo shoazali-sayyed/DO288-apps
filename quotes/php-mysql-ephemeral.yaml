@@ -234,10 +234,6 @@ parameters:
   description: The OpenShift Namespace where the S2I biulder ImageStream resides.
   value: openshift
   required: true
-- name: SOURCE_REPOSITORY_URL
-  displayName: Git Repository URL
-  description: The URL of the repository with your application source code.
-  required: true
 - name: SOURCE_REPOSITORY_REF
   displayName: Git Reference
   description: Set this to a branch name, tag or other ref of your repository if you
@@ -259,10 +255,6 @@ parameters:
 - name: DATABASE_SERVICE_NAME
   displayName: Database Service Name
   value: mysql
-  required: true
-- name: DATABASE_NAME
-  displayName: Database Name
-  value: phpapp
   required: true
 - name: DATABASE_USER
   displayName: Database User
