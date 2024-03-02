@@ -223,7 +223,7 @@ objects:
         volumes:
         - emptyDir: {}
           name: data
-#ENTER THE PARAMETERS GIT URL,APPLICATION DOMAIN DB USER AND PASSWORD##
+#PARAMETERS GIT URL,APPLICATION_DOMAIN AND DATABASE_PASSWORD######
 
 
 
@@ -262,10 +262,17 @@ objects:
     of the webhook URL.  Not encrypted.
   generate: expression
   from: "[a-zA-Z0-9]{40}"
+- name: DATABASE_NAME
+  displayName: Database Name
+  value: phpapp
+  required: true
 - name: DATABASE_SERVICE_NAME
   displayName: Database Service Name
   value: quotesdb
   required: true
+- name: DATABASE_USER
+  displayName: Database User Name
+  value: user1
 labels:
   template: php-mysql-ephemeral
 
