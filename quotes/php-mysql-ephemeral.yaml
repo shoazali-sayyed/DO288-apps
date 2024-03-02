@@ -223,7 +223,7 @@ objects:
         volumes:
         - emptyDir: {}
           name: data
-#ENTER THE PARAMETERS HERE FOR GIT URL AND DATABASE NAME phpapp####
+#ENTER THE PARAMETERS GIT URL,APPLICATION DOMAIN DB USER AND PASSWORD##
 
 
 
@@ -235,14 +235,10 @@ objects:
 #INPUT ENDS HERE & CUSTOM VALUES TO BE GIVEN AT RUNTIME###########
 
 
-
-
-
-
 - name: NAME
   displayName: Name
   description: The name assigned to all of the app objects defined in this template.
-  value: php-app
+  value: quoteapi
   required: true
 - name: NAMESPACE
   displayName: Namespace
@@ -257,10 +253,9 @@ objects:
   displayName: Context Directory
   description: Set this to the relative path to your project if it is not in the root
     of your repository.
-- name: APPLICATION_DOMAIN
-  displayName: Application Hostname
-  description: The exposed hostname that will route to the PHP app service, if left
-    blank a value will be defaulted.
+  value: quotes
+  required: true
+
 - name: GITHUB_WEBHOOK_SECRET
   displayName: GitHub Webhook Secret
   description: Github trigger secret.  A difficult to guess string encoded as part
@@ -269,16 +264,8 @@ objects:
   from: "[a-zA-Z0-9]{40}"
 - name: DATABASE_SERVICE_NAME
   displayName: Database Service Name
-  value: mysql
+  value: quotesdb
   required: true
-- name: DATABASE_USER
-  displayName: Database User
-  value: php
-  required: true
-- name: DATABASE_PASSWORD
-  displayName: Database Password
-  generate: expression
-  from: "[a-zA-Z0-9]{16}"
 labels:
   template: php-mysql-ephemeral
 
