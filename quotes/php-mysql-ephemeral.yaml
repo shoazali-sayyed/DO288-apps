@@ -223,7 +223,22 @@ objects:
         volumes:
         - emptyDir: {}
           name: data
-parameters:
+#ENTER THE PARAMETERS HERE FOR GIT URL AND DATABASE NAME phpapp####
+
+
+
+          
+
+
+
+
+#INPUT ENDS HERE & CUSTOM VALUES TO BE GIVEN AT RUNTIME###########
+
+
+
+
+
+
 - name: NAME
   displayName: Name
   description: The name assigned to all of the app objects defined in this template.
