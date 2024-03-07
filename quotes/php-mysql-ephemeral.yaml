@@ -231,7 +231,7 @@ objects:
 - name: NAME
   displayName: Name
   description: The name assigned to all of the app objects defined in this template.
-  value: php-app
+  value: quotes-api
   required: true
 - name: NAMESPACE
   displayName: Namespace
@@ -244,9 +244,8 @@ objects:
     are not using the default branch.
 - name: CONTEXT_DIR
   displayName: Context Directory
-  description: Set this to the relative path to your project if it is not in the root
-    of your repository.
-
+  value: quotes
+  
 - name: GITHUB_WEBHOOK_SECRET
   displayName: GitHub Webhook Secret
   description: Github trigger secret.  A difficult to guess string encoded as part
@@ -255,7 +254,7 @@ objects:
   from: "[a-zA-Z0-9]{40}"
 - name: DATABASE_SERVICE_NAME
   displayName: Database Service Name
-  value: mysql
+  value: quotesdb
   required: true
 - name: DATABASE_NAME
   displayName: Database Name
@@ -263,7 +262,7 @@ objects:
   required: true
 - name: DATABASE_USER
   displayName: Database User
-  value: php
+  value: user1
   required: true
 
 labels:
