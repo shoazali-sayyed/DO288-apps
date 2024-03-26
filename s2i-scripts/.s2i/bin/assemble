@@ -10,10 +10,13 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-echo "---> Creating info page"
+cp -R /temp/src/*.html ./
 
+DATE=`date "+%F"`
 
-echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+echo "Page built on $DATE" >> info.html
+echo "Astra inclinant" >> info.html
+
 
 ######## CUSTOMIZATION ENDS HERE ############
 
