@@ -3,6 +3,7 @@ kind: Template
 apiVersion: template.openshift.io/v1
 metadata:
   name: php-mysql-ephemeral
+  namespace: openshift
   annotations:
     description: |-
       A  PHP application with a MySQL database.
@@ -264,6 +265,9 @@ objects:
   displayName: Database User
   value: user1
   required: true
-
+- name: DATABASE_PASSWORD
+  displayName: Database User
+  value: mypa55
+  required: true
 labels:
   template: php-mysql-ephemeral
