@@ -232,7 +232,7 @@ objects:
 - name: NAME
   displayName: Name
   description: The name assigned to all of the app objects defined in this template.
-  value: quotes-api
+  value: php-app
   required: true
 - name: NAMESPACE
   displayName: Namespace
